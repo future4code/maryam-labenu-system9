@@ -3,7 +3,7 @@ import { connection } from "../connection";
 
 export default async function pegarEstudante (req: Request, res: Response){
     try {
-        const nomeDaPesquisa = req.body.nome
+        const nomeDaPesquisa = req.params.nome
         const resultado: any = await connection.raw(`
             SELECT * FROM Estudante
             WHERE nome LIKE "%${nomeDaPesquisa}%"

@@ -11,10 +11,10 @@ import pegarTurmasAtivas from "./endpoints/pegarTurmasAtivas";
 
 app.get("/pegar/turma", pegarTurmasAtivas)
 app.get("/pegar/docente", pegarDocente)
+app.get("/pegar/estudante/:nome", pegarEstudante) 
 app.post("/criar/turma", criarTurma)
 app.post("/criar/estudante", criarEstudante)
 app.post("/criar/docente", criarDocente)
-app.post("/pegar/estudante", pegarEstudante) 
 app.put("/atualiza/modulo", atualizaModuloTurma)
 app.put("/mudar/turma/estudante", mudarEstudanteDeTurma)
 app.put("/mudar/turma/docente", mudarDocenteDeTurma)
